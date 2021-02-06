@@ -1,0 +1,17 @@
+{
+  "files.exclude": {
+    // "**/.gitignore": true,
+    "**/.babelrc": true,
+    "**/.gcloudignore": true,
+    "**/yarn.lock": true,
+    "**/jsconfig.json": true,
+    "**/package.json": true,
+    "**/package-lock.json": true,
+    // "**/deploy.sh": true,
+    // "**/build.sh": true,
+    // "**/app.yaml": true,
+    "**/node_modules": true,
+    "**/docs": true,
+    "**/build": true
+  }
+}
