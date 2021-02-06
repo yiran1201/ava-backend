@@ -1,5 +1,10 @@
 import db from '../utils/cache-util';
 
+const resetConversations = (_, res) => {
+  const conversations = db.resetConversations();
+  res.json({conversations, msg: '', ok: true});
+};
+
 const getConversations = (_, res) => {
   const conversations = db.getConversationsAPI();
   res.json({conversations, msg: '', ok: true});
@@ -34,4 +39,5 @@ export {
   deleteConversation,
   clearConversations,
   addConversation,
+  resetConversations,
 };

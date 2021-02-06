@@ -3,6 +3,10 @@ import {buildConversations} from './seed-util';
 // Build a mock in-memory database for the project
 class InMemoryDB {
   constructor() {
+    this.resetConversations();
+  }
+
+  resetConversations() {
     this.conversations = buildConversations(20);
   }
 

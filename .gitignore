@@ -8,6 +8,7 @@
 # testing
 /coverage
 /.vscode
+/build
 
 # misc
 .DS_Store
@@ -20,3 +21,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 package-lock.json
+.gcloudignore
+yarn.lock
+.babelrc
+jsconfig.json
+deploy.sh
+build.sh

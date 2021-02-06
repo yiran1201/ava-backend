@@ -3,7 +3,7 @@ cd ../frontend && \
 npm run build && \
 mv build ../backend && \
 cd ../backend && \
-gcloud config set project ava-yiran && \
+gcloud config set project ava-yiranchen && \
 gcloud --quiet app deploy ./app.yaml &&
 git add -A && \
 git commit -m "update deploy" && \

@@ -10,6 +10,7 @@ import {
   deleteConversation,
   getConversation,
   getConversations,
+  resetConversations,
 } from './controllers/conversation-controller';
 import {handleMutation} from './controllers/mutation-controller';
 import {getInfo, getPing} from './controllers/static-controller';
@@ -29,6 +30,7 @@ app.post('/mutations', handleMutation);
 app.get('/conversation/:conversationId', getConversation);
 app.delete('/conversation/:conversationId', deleteConversation);
 app.post('/conversation', addConversation);
+app.get('/reset-conversations', resetConversations);
 app.get('/conversations', getConversations);
 app.delete('/conversations', clearConversations);
 
