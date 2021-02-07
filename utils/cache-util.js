@@ -94,6 +94,11 @@ class InMemoryDB {
   clearConversations() {
     this.conversations.splice(0, this.conversations.length);
   }
+
+  hasConversation(conversationId) {
+    const ids = this.conversations.slice().map(({id}) => id);
+    return ids.includes(conversationId);
+  }
 }
 
 const db = new InMemoryDB();

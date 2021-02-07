@@ -23,12 +23,24 @@ const addConversation = (req, res) => {
 
 const getConversation = (req, res) => {
   const {conversationId} = req.params;
+  if (!db.hasConversation(conversationId)) {
+    return res.status(400).json({
+      msg: 'conversation does not exist.',
+      ok: false,
+    });
+  }
   const conversation = db.getConversation(conversationId);
   res.json(conversation);
 };
 
 const deleteConversation = (req, res) => {
   const {conversationId} = req.params;
+  if (!db.hasConversation(conversationId)) {
+    return res.status(400).json({
+      msg: 'conversation does not exist.',
+      ok: false,
+    });
+  }
   db.deleteConversation(conversationId);
   res.json({msg: '', ok: true});
 };

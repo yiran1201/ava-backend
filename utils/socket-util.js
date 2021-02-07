@@ -7,6 +7,7 @@ export const connectSocket = (server) => {
     console.log('Client connected!');
 
     socket.on('syncConversations', () => {
+      // broadcast to all users
       io.emit('retrieveConversations', db.getConversations());
     });
 
@@ -19,5 +20,5 @@ export const connectSocket = (server) => {
     });
   });
 
-  io.on('disconnect', () => console.log('User has left!!'));
+  io.on('disconnect', () => console.log('User left!!'));
 };

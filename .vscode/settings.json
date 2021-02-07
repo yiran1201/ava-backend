@@ -5,7 +5,7 @@
     "**/.gcloudignore": true,
     "**/yarn.lock": true,
     "**/jsconfig.json": true,
-    "**/package.json": true,
+    // "**/package.json": true,
     "**/package-lock.json": true,
     // "**/deploy.sh": true,
     // "**/build.sh": true,
