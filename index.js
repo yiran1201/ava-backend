@@ -16,6 +16,7 @@ import {handleMutation} from './controllers/mutation-controller';
 import {getInfo, getPing} from './controllers/static-controller';
 import {logRoute} from './utils/log-util';
 import {connectSocket} from './utils/socket-util';
+import {getTest, testHandleMutation, testGetConversations} from './utils/test-util'
 
 const app = Express();
 // Temporarily accept requests from anywhere includes: https://app.ava.me (CORS policy).
@@ -33,6 +34,13 @@ app.post('/conversation', addConversation);
 app.get('/reset-conversations', resetConversations);
 app.get('/conversations', getConversations);
 app.delete('/conversations', clearConversations);
+
+/*************************
+ * Pointless Tests Route *
+ *************************/
+app.get('/dev', getTest);
+app.post('/dev/mutations', testHandleMutation);
+app.get('/dev/conversations', testGetConversations);
 
 /***********************
  * Static Files Import *
